@@ -1,9 +1,9 @@
-import Image from "next/image";
+import CategoryMenu from "@/app/components/category-menu/CategoryMenu";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans ">
-      <h1 className="text-black">Hello World!</h1>
+    <div className="min-h-screen font-sans ">
+      <CategoryMenu />
     </div>
   );
 }
