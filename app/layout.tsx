@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Open_Sans } from 'next/font/google'; // Note the underscore for multi-word font names
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap', // 'swap' ensures text is visible while the font loads
 });
 
 export const metadata: Metadata = {
@@ -25,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${openSans} antialiased`}
       >
         {children}
       </body>
