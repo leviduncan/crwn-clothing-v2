@@ -1,4 +1,5 @@
 import React from 'react'
+import './categories.styles.scss'
 
 function App() {
 
@@ -11,12 +12,12 @@ function App() {
   ]
 
   return (
-    <div classtitle='categories-container'>
+    <div className='categories-container'>
       {
         categories.map((category) => (
-          <div key={category.id} classtitle='category-container'>
+          <div key={category.id} className='category-container'>
             <div className='background-image' />
-            <div classtitle='category-body-container'>
+            <div className='category-body-container'>
               <h2>{category.title}</h2>
               <p>Shop Now</p>
             </div>
