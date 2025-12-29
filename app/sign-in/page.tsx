@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { auth, signInWithGooglePopup } from '../firebase'
+import { auth, signInWithGooglePopup, createUserDocumentFromAuth } from '../firebase'
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth"
 import AccountAccess from '../components/AccountAccess'
 
@@ -20,6 +20,7 @@ function page() {
 
   const logGoogleUser = async () => {
     const resp = await signInWithGooglePopup()
+    const userDocRef = await createUserDocumentFromAuth(resp.user)
     console.log(resp)
   }
 
