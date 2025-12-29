@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { auth } from '../firebase'
+import { auth, signInWithGooglePopup } from '../firebase'
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth"
 import AccountAccess from '../components/AccountAccess'
 
@@ -16,6 +16,11 @@ function page() {
   const onSubmit = async () => {
     await signInUserWithEmailAndPassword(email, password)
     router.push("/")
+  }
+
+  const logGoogleUser = async () => {
+    const resp = await signInWithGooglePopup()
+    console.log(resp)
   }
 
   const accType: { title: string }[] = [
@@ -47,6 +52,13 @@ function page() {
       >
         Sign In
       </button>
+      <button
+        className="border w-50 mx-auto my-5 capitalize rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-black hover:text-white"
+        onClick={logGoogleUser}
+      >
+        Sign In with Google
+      </button>
+
       {
         accType.map((type) => {
           return(
