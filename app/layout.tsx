@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${openSans} antialiased`}
       >
         <Navbar />
-        <main className="py-20 max-w-6xl mx-auto">{children}</main>
+        <main className="py-20 max-w-6xl mx-auto h-dvh">{children}</main>
       </body>
     </html>
   );

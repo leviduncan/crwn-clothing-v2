@@ -7,7 +7,7 @@ const Links = [
     { href: "/about", text: "about" },
     { href: "/shop", text: "shop" },
     { href: "/contact", text: "contact" },
-    { href: "/sign-up", text: "sign-up" },
+    { href: "/sign-in", text: "sign in" },
 ]
 
 
