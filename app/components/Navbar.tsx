@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link"
+import Logo from "./Logo";
 
 const Links = [
     { href: "/", text: "home" },
@@ -12,7 +13,8 @@ const Links = [
 const Navbar = () => {
     return (
         <nav className="bg-gray-800 fixed w-full z-10">
-            <div className="navbar max-w-6xl mx-auto">
+            <div className="navbar max-w-6xl mx-auto flex justify-between">
+                <Logo />
                 <ul className="menu md:ml-8 flex flex-col sm:flex-row py-5">
                     {Links.map((link) => {
                         return (
