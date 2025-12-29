@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Open_Sans } from 'next/font/google'; // Note the underscore for multi-word font names
+import Navbar from "./components/Navbar";
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -22,7 +23,8 @@ export default function RootLayout({
       <body
         className={`${openSans} antialiased`}
       >
-        {children}
+        <Navbar />
+        <main className="py-20 max-w-6xl mx-auto">{children}</main>
       </body>
     </html>
   );
