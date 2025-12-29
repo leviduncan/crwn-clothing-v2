@@ -26,7 +26,7 @@ function page() {
 
   return (
     <div className="flex justify-center items-center flex-col h-full">
-      <h1 className="text-4xl font-bold mb-4">Sign in page</h1>
+      <h1 className="text-4xl font-bold mb-4">Sign in</h1>
       <input
         type="text"
         placeholder="Email"
@@ -42,7 +42,7 @@ function page() {
         className="text-xl px-4 rounded-md border border-gray-300 mb-4"
       />
       <button
-        className="bg-yellow-500 text-black px-4 py-2 rounded-md font-bold"
+        className="border w-50 mx-auto my-5 capitalize rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-black hover:text-white"
         onClick={onSubmit}
       >
         Sign In
